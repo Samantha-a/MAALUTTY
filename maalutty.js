@@ -1,56 +1,81 @@
-/* Copyright (C) 2020 Yusuf Usta.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-WhatsAsena - Yusuf Usta
-*/
-
-const chalk = require('chalk');
-const {WAConnection, MessageOptions, MessageType} = require('@adiwajshing/baileys');
-const {StringSession} = require('./maalutty/');
+const Asena = require('../events');
+const {MessageType} = require('@adiwajshing/baileys');
+const got = require('got');
 const fs = require('fs');
+const axios = require('axios');
+const { errorMessage, infoMessage } = require('../helpers');
+const IG_DESC = "Downloads Image/Video From Instagram"
+const NEED_WORD = "Must Enter a link"
+const FBDESC = "Downloads Video From FaceBook"
+const LOADING = "Downloading the Video..."
+const NOT_FOUNDFB = "Video Not Found"
+const CAPTION = "Caption"
 
-async function whatsAsena () {
-    const conn = new WAConnection();
-    const Session = new StringSession();  
-    conn.version = [2, 2140, 12]
-    conn.logger.level = 'warn';
-    conn.regenerateQRIntervalMs = 50000;
-    
-    conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
-${chalk.white.italic('AsenaString Kodu Alıcı')}
-${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
-    });
-    
+Asena.addCommand({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (message, match) => {
 
-    conn.on('open', async () => {
-        var st = Session.createStringSession(conn.base64EncodedAuthInfo());
-        console.log(
-            chalk.green.bold('Asena String Kodunuz: '), Session.createStringSession(conn.base64EncodedAuthInfo())
-        );
+    const userName = match[1]
+
+    if (!userName) return await message.sendMessage(errorMessage(NEED_WORD))
+
+    await message.sendMessage(infoMessage("Downloading the Post..."))
+
+    await axios
+      .get(`https://api-anoncybfakeplayer.herokuapp.com/igdown?url=${userName}`)
+      .then(async (response) => {
+        const {
+          url,
+          type,
+        } = response.data.result[0]
+
+        const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
+
+        const msg = `${type}`
+
+	 if (msg === 'image') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
+          caption: "Made By Vidhyamwol"
+        })}
+		 	 
+	if (msg === 'video') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+          caption: "Made By Vidhyamwol"
+        })}
+	
         
-        if (!fs.existsSync('config.env')) {
-            fs.writeFileSync('config.env', `ASENA_SESSION="${st}"`);
-        }
-        if (conn.user.jid.startsWith('90')) {
-            await conn.sendMessage(conn.user.jid,st, MessageType.text)
-            await conn.sendMessage(conn.user.jid,'*Bu Kodu Kimseyle Paylaşmayın!*', MessageType.text)
-            console.log(
-                chalk.blue.bold('Locale kuruyorsanız node bot.js ile botu başlatabilirsiniz.')
-            );
-        }
-        else {
-            await conn.sendMessage(conn.user.jid,st, MessageType.text)
-            await conn.sendMessage(conn.user.jid,'*Do Not Share This Code With Anyone!*', MessageType.text)
-            console.log(
-                chalk.blue.bold('If you are installing locale, you can start the bot with node bot.js')
-            );
-        }
-        
-        process.exit(0);
-    });
+      })
+      .catch(
+        async (err) => await message.sendMessage(errorMessage("Invaild Link, Please Enter a Vaild Instagram Link")),
+      )
+  },
+)
 
-    await conn.connect();
-}
 
-whatsAsena()
+
+
+Asena.addCommand({ pattern: 'fb ?(.*)', fromMe: false, desc: FBDESC }, async (message, match) => {
+
+    const userName = match[1]
+
+    if (!userName) return await message.sendMessage(errorMessage(NEED_WORD))
+
+    await message.sendMessage(infoMessage(LOADING))
+
+    await axios
+      .get(`https://videfikri.com/api/fbdl/?urlfb=${userName}`)
+      .then(async (response) => {
+        const {
+          url,
+          judul,
+        } = response.data.result
+
+        const profileBuffer = await axios.get(url, {responseType: 'arraybuffer'})
+
+        const msg = `*${CAPTION}*: ${judul}`
+
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+          caption: "Made By Vidhyamwol"
+        })
+      })
+      .catch(
+        async (err) => await message.sendMessage(errorMessage(NOT_FOUNDFB )),
+      )
+  },
+)
