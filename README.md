@@ -3,10 +3,10 @@
         <img src="https://i.ibb.co/6tbmPj1/maaluttty.jpg" alt="GIF" width="250" height="250"/>
 </p>
 
-<a href="#"><img title="MAALUTTY_V3" src="https://img.shields.io/badge/MAALUTTY_V3-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="MAALUTTY" src="https://img.shields.io/badge/MAALUTTY-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
   <p align="center">
-<a href="https://github.com/nijin-husni"><img title="Author" src="https://img.shields.io/badge/Author-Husnijin-/MAALUTTY_V3?color=blue&style=for-the-badge&logo=whatsapp"></a>
+<a href="//github.com/Samantha-a/MAALUTTY"><img title="Author" src="https://img.shields.io/badge/Author-Samantha-/MAALUTTY?color=blue&style=for-the-badge&logo=whatsapp"></a>
 </p>
 </div>
 <p align="center">
@@ -17,7 +17,7 @@ Project created by <a href="https://github.com/nijin-husni">nijin-husni</a> to m
     <br> 
 </p>
 
-![Profile Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/nijin-husni/MAALUTTY_V3&title=MAALUTTY_V3%20Views)
+![Profile Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/Samantha-a/MAALUTTY&title=MAALUTTY_V3%20Views)
 
 ## Setup
 <div align="center">
@@ -27,14 +27,14 @@ Project created by <a href="https://github.com/nijin-husni">nijin-husni</a> to m
 [![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@Husniser/MAALUTTYV3-QR)
   
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nijin-husni/MAALUTTY_V3) 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Samantha-a/MAALUTTY) 
  
 ### The Hard Method
 ```js
 GET QR
 $ apt install git
 $ apt install nodejs --fix-missing
-$ git clone https://github.com/nijin-husni/MAALUTTY_V3
+$ git clone https://github.com/Samantha-a/MAALUTTY
 $ cd MAALUTTY_V3
 $ npm install @adiwajshing/baileys
 $ npm install chalk
@@ -43,7 +43,7 @@ $ node maalutty.js
       
 ```js
 SETUP
-$ git clone https://github.com/nijin-husni/MAALUTTY_V3
+$ git clone https://github.com/Samantha-a/MAALUTTY
 $ cd MAALUTTY_V3
 $ npm i
 $ node maalutty.js
