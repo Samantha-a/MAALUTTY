@@ -1,164 +1,100 @@
 {
-    "name": "MAALUTTY_V3",
-    "description": "Maalutty is the Modified Version of WhatsAsena, Made By niin and husni with Baileys.",
-    "logo": "https://i.ibb.co/3ypJ8QW/20211209-194953.jpg",
-    "keywords": ["whatsapp", "userbot", "Maalutty", "WhatsAsena", "mwol", "bot", "ai"],
-    "repository": "https://github.com/nijin-husni/MAALUTTY_V3",
-    "website":   "https://github.com/nijin-husni/MAALUTTY_V3",
-    "success_url": "https://github.com/nijin-husni/MAALUTTY_V3",
+    "name": "Vidhyamwol bgm bot",
+    "description": "Vidhya project - Makes it easy and fun to use Whatsapp. World’s first UserBot made for WhatsApp.",
+    "logo": "https://i.hizliresim.com/m13agyp.jpg",
+    "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai"],
+    "repository": "https://github.com/Albin-manoj/Vidhyamwol",
+    "website":   "https://t.me/phaticusthiccy",
+    "success_url": "https://t.me/AsenaSupport",
     "stack": "container",
     "env": {
-        "MAALUTTY_CODE": {
-            "description": "Type the code when you got by scanning QR through WhatsApp.",
-            "required": false
-        },
-         "BROADCAST_NAME": {
-            "description": "maalu forward ordertext",
-            "required": false,
-            "value": "✰𝙼𝙰𝙰𝙻𝚄𝚃𝚃𝚈_𝚅3✰"
-        },
-        "ALL_IMG": {
-            "description": "Change This Image Link If You Want To Change Audio Bc Thumbnail",
-            "required": false,
-            "value": "https://i.ibb.co/3ypJ8QW/20211209-194953.jpg"
-        },
-        "V_HEADER": {
-            "description": "Set the Header name logo",
-            "required": false,
-            "value": "✰𝙼𝙰𝙰𝙻𝚄𝚃𝚃𝚈_𝚅3✰"
-        },
-        "VERIFIED": {
-            "description": "Give with number jid",
-            "required": false,
-            "value": "0@s.whatsapp.net"
-        },
-        "DIALOGUE": {
-            "description": "set the Dialouge",
-            "required": false,
-            "value": "MAALUTTY_V3"
+        "ASENA_SESSION": {
+            "description": "Qr.Js ile oluşturduğunuz özel session kodu. Type here yours Asena Session.",
+            "required": true
         },
         "SUDO": {
-            "description": "Leave blank if you don't know how to use it! Sudo mode; Your number must be an international number. So you should have your number after the country code. Example: 91xxxxxxxxx,0",
-            "required": false
+            "description": "Leave blank if you don't know how to use it! Sudo mode; Your number must be an international number. So you should have your number after the country code. Example: 1205xxxxxxxxx (USA number +1)",
+            "required": false,
+            "value": "919946134325"
         },
         "LANGUAGE": {
-            "description": "Bot language.English => en",
-            "required": false,
-            "value": "en"
+            "description": "only english language is available",
+            "required": true,
+            "value": "EN"
         },
         "BGM_FILTER": {
             "description": "If you likes bgm you can write 'true'. Otherwise false",
             "required": false,
             "value": "true"
         },
-        "OWNER_NAME": {
-            "description": "Fill your name in here. it will show your name in .owner command reply",
-            "required": false,
-            "value": "💖Nijin and Husni💖"
+        "GIF_WEL": {
+            "description": "Welcome message video നിങ്ങൾക്ക് വേണ്ട welcome gif ന്റെ link കൊടുക്കുക .",
+            "required": true,
+            "value": "https://i.imgur.com/ZoA7as9.mp4"
         },
-        "AUTO_STICKER": {
-            "description": "If you likes bgm you can write 'true'. Otherwise false",
-            "required": false,
-            "value": "true"
+        "GIF_BYE": {
+            "description": "Goodbye message video നിങ്ങൾക്ക് വേണ്ട goodbye gif ന്റെ link കൊടുക്കുക .",
+            "required": true,
+            "value": "https://i.imgur.com/NTar8dQ.mp4"
         },
-        "INBO_BLOCK": {
-            "description": "Inbox Blocking System. True koduthal ningalude pml vann chila bad words upoayogikunnavare bot block aakum block aakendengil false kodukuka",
+         "XTEAM_API": {
+            "description": "api key. https://api.xteam.xyz/",
             "required": false,
-            "value": "false"
+            "value": "5bd33b276d41d6b4"
         },
-        "WELCOME": {
-            "description": "You can select welcome as gif/pp",
+	"ZEKS_API": {
+            "description": "api key. https://zeks.xyz/",
             "required": false,
-            "value": "pp"
+            "value": "cjxJIn9eDletRHac3CG6CdvGxFH"
         },
-        "LG_LOGO": {
-            "description": "LOGO list message image link(https://telegra.ph/)link.",
+	"LOLUHUMAN_API": {
+            "description": "api key. https://lolhuman.herokuapp.com/",
             "required": false,
-            "value": "https://i.ibb.co/3ypJ8QW/20211209-194953.jpg"
-        },
-        "LOGO_NAME": {
-            "description": "Set the logo list name",
-            "required": false,
-            "value": "MAALUTTY_V3"
-        },
-        "WEL_GIF": {
-            "description": "Fill here any gif link if you selected gif as WEELCOME",
-            "required": false,
-            "value": "false"
-        },
-        "BYE_GIF": {
-            "description": "Fill here any gif link if you selected gif as WEELCOME",
-            "required": false,
-            "value": "false"
-        },
-        "TAG_REPLY": {
-            "description": "Enter jid of your number so that you get a audio reply when metioned example - 91xxxxxxxxxx@s.whatsapp.net - for india",
-            "required": false
-
+            "value": "990580a2e31add15990665b0"
         },
         "ANTİ_LİNK": {
-            "description": "Link Blocking System.",
-            "required": false,
+            "description": "Link Engelleme Sistemi. Link Blocking System.",
+            "required": true,
             "value": "false"
-        },
-        "BGM_DURATION": {
-            "description": "FUNY BGM DURATION  codded by SAIDALI",
-            "required": false,
-            "value": "39999600"
         },
         "AUTO_BİO": {
-            "description": " Set true for auto date, time in biography.",
-            "required": false,
-            "value": "false"
-        },
-        "BAD_WORDS": {
-            "description": "enter the word you dont allow in your group ",
-            "required": false,
-            "value": "false"
+            "description": "Duruma otomatik tarih ve zaman eklemek için true yapın. Set true for auto date, time in biography.",
+            "required": true,
+            "value": "true"
         },
         "HANDLERS": {
-            "description": "For commands.",
-            "required": false,
-            "value": "^[.!;]"
+            "description": "Komutlar için. For commands.",
+            "required": true,
+            "value": "^[.!?#*;]"
         },
-        "TALKING_MAALUTTY": {
-            "description": "Turn your account into a talking maalutty!",
-            "required": false,
+        "FULL_EVA": {
+            "description": "Hesabınızı bir Chatbot'a Çevirin! Turn your account into a chatbot!",
+            "required": true,
             "value": "true"
         },
         "NO_LOG": {
-            "description": " Set true if you don't want to see error log.",
-            "required": false,
-            "value": "false"
-        },
-        "SEND_READ": {
-            "description": "Write true if you want to throw seen.",
-            "required": false,
+            "description": "Hata logu görmek istemiyorsanız true yapın. Set true if you don't want to see error log.",
+            "required": true,
             "value": "true"
         },
-        "ALL_CAPTION": {
-            "description": "Caption for images and videos generated by pinky bot",
-            "required": false,
-            "value": "Made by 💝MAALUTTY_V3💝"
+        "SEND_READ": {
+            "description": "Görüldü atmak istiyorsanız true yazın. Write true if you want to throw seen.",
+            "required": true,
+            "value": "true"
         },
         "HEROKU": {
-            "description": "If it is running in Heroku, type true.",
-            "required": false,
+            "description": "Herokuda çalışıyorsa true yazın. If it is running in Heroku, type true.",
+            "required": true,
             "value": "true"
         },
         "HEROKU_API_KEY": {
-            "description": "Heroku API Key.",
-            "required": false
+            "description": "Herokuda API Keyiniz. Heroku API Key.",
+            "required": true
         },
         "MUTE_MESSAGE": {
-            "description": "Customizable Mute Message! Use => default, to change back.",
+            "description": "Düzenlenebilir Mute Mesajı. Customizable Mute Message! Use => default, to change back.",
             "required": false,
             "value": "default"
-        },
-        "TAG_HEADER": {
-            "description": "Heading when taging all",
-            "required": false,
-            "value": "𝙼𝙰𝙰𝙻𝚄𝚃𝚃𝚈 𝚅𝙰𝙽𝙽𝚄 𝙿𝙾𝚆𝙴𝚁 𝚅𝙰𝙽𝙽𝚄🥂"
         },
         "BLOCK_CHAT": {
             "description": "Choose in which chat the bot won't work there. Ex: 905xxxx && 905xxxx-1xxx or 905xxxx,905xxx...",
@@ -166,76 +102,47 @@
             "value": "false"
         },
         "UNMUTE_MESSAGE": {
-            "description": "Customizable Unmute Message! Use => default, to change back.",
+            "description": "Düzenlenebilir Unmute Mesajı. Customizable Unmute Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
         "BLOCK_MESSAGE": {
-            "description": "Customizable Block Message! Use => default, to change back.",
+            "description": "Düzenlenebilir Block Mesajı. Customizable Block Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
         "UNBLOCK_MESSAGE": {
-            "description": "Customizable Unblock Message! Use => default, to change back.",
+            "description": "Düzenlenebilir Unblock Mesajı. Customizable Unblock Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
-        "NUMBER": {
-            "description": "Enter the owner number, You must enter your number, Please don't enter the number with country code ( example : 91 for indian ) Also don't enter space & + on the number ( example : 91996132xxxx for indian ). ( This number will be shown on some commands )",
-            "required": false,
-            "value": "917025868709"
-        },
-        "DEPLOYER": {
-            "description": "enter your name here",
-            "required": false
-        },
-        "BOT_NAME": {
-            "description": "heading for .list command reply",
-            "required": false,
-            "value": "🔰MAALUTTY_V3🔰⁩"
-        },
         "WORK_TYPE": {
-            "description": "Maalutty Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
-            "required": false,
+            "description": "WhatsAsena Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
+            "required": true,
             "value": "public"
         },
         "HEROKU_APP_NAME": {
-            "description": "Heroku APP Name.",
-            "required": false
+            "description": "Herokuda uygulama adı. Heroku APP Name.",
+            "required": true
         },
         "DEBUG": {
-            "description": "Debugging",
-            "required": false,
+            "description": "Geliştiricilere özeldir.",
+            "required": true,
             "value": "false"
         },
         "REMOVE_BG_API_KEY": {
-            "description": "https://remove.bg",
+            "description": "Fotoğrafların arkaplanını kaldırır. https://remove.bg",
             "required": false
         },
-        "ALIVE_BUTTON": {
-            "description": "Customize Alive Button ",
+        "ALIVE_MESSAGE": {
+            "description": "Customizable Alive Message! Use => default, to change back.",
             "required": false,
-            "value": "ᴇɴɢᴀɴᴇʏᴜɴᴅ \n ᴍᴀᴀʟᴜᴛᴛʏ🌝"
-        },
-        "ALIVE_BUTTON2": {
-            "description": "Customize Alive Button ",
-            "required": false,
-            "value": "POWEREESH🤩"
+            "value": "I am ALIVE bro 😜 coded by Albin-manoj"
         },
         "BAN_MESSAGE": {
             "description": "Customizable Ban Message! Use => default, to change back.",
             "required": false,
             "value": "default"
-        },
-        "SONGD": {
-            "description": "Customizable song DOWNLOADING message instead of 'Dowloading your song'",
-            "required": false,
-            "value": "*Downloading your song*"
-        },
-        "SONGU": {
-            "description": "Customizable song UPLOADING message instead of 'Uploading your song'",
-            "required": false,
-            "value": "*Feel the song*"
         },
         "ADD_MESSAGE": {
             "description": "Customizable Add Message! Use => default, to change back.",
@@ -262,8 +169,18 @@
             "required": false,
             "value": "default"
         },
+        "GAN_IMAGE": {
+            "description": "Gan Style eklentisi için resim bağlantısı yazın. Type image link for Gan Style plugin.",
+            "required": true,
+            "value": "https://i.hizliresim.com/loUtAb.jpg"
+        },
         "NO_ONLINE": {
             "description": "Çevrimiçi görünmek istemiyorsanız true yazın. Type true if you don't want to appear online.",
+            "required": false,
+            "value": "true"
+        },
+        "COFFEEHOUSE_API_KEY": {
+            "description": "Pass This Step! - Bu Bölümü Geçin!",
             "required": false,
             "value": "true"
         }
